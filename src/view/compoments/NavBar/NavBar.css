@@ -1,0 +1,33 @@
+.navBar{
+    background: #7ed321;
+}
+@media screen and (min-width: 600px){
+    .logo{
+        content: url("../../../assert/img/logo-middle-size.png");
+        height: 56px;
+        width: 147px;
+    }
+}
+@media screen and (max-width: 599px){
+   .logo{
+       height: 37pt;
+       width: 98pt;
+       content: url("../../../assert/img/logo-middle-size.png");
+   }
+}
+.menuBar ul li{
+    display: inline;
+    padding-left:45px;
+    padding-bottom: 4px;
+    color:#fff;
+    width: 96px;
+    height: 16px;
+    font-size: 14px;
+    text-align: center;
+}
+.menuBar li a:hover{
+    border-bottom:solid 1px #fff;
+}
+@media screen and (max-width: 699px){
+
+}
