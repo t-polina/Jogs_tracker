@@ -6,6 +6,7 @@ import Jog from "../compoments/Jog/Jog";
 import { MuiPickersUtilsProvider, KeyboardDatePicker} from '@material-ui/pickers'
 import Grid from "@material-ui/core/Grid";
 import DateFnsUtils from '@date-io/date-fns';
+import WithoutJogs from "../compoments/WithoutJogs/WithoutJogs";
 
 class JogPage extends React.Component {
     state = {
@@ -15,13 +16,14 @@ class JogPage extends React.Component {
 
     componentDidMount() {
         this.props.getUser('hello');
-         // this.props.getJogs()
     };
 
-    // componentDidUpdate(prevProps, prevState, snapshot) {
-    //      if( this.props == prevProps_)
-       // this.props.getJogs(this.props.user.id)
-    // }
+    handelCreate =(...arg)=>{
+        console.log(arg)
+        arg[0]===undefined ? this.props.history.push('/create-jog') :
+        this.props.history.push(`/update-jog/${arg[0]}`);
+    };
+
     handelChangeStartPicker = date => {
         this.setState({
             startDate: date
@@ -41,15 +43,21 @@ class JogPage extends React.Component {
                 if (el.date > this.state.startDate.getTime() && el.date < this.state.endDate.getTime()) {
                     let date = new Date(el.date).toString();
                     date = getMonth(date.substr(4, 3), date.substr(8, 2), date.substr(11, 4));
-                    allJogs.push(<Jog time={el.time} speed={(el.distance / el.time).toFixed(2)}
-                                      distance={el.distance.toFixed(2)}
-                                      date={date}/>)
+                    allJogs.push(<Jog time = {el.time}
+                                      speed = {(el.distance / el.time).toFixed(2)}
+                                      distance = {el.distance.toFixed(2)}
+                                      date = {date}
+                                      id = {el.id}
+                                      handelCreate = {this.handelCreate}
+                                  />);
                 }
             }
-        }
-        console.log(allJogs);
-        if(allJogs.length===0){
-            allJogs = <button>PAMAGITEEE</button>
+            if(this.props.jogs.length===0){
+                allJogs = <WithoutJogs handelCreate={this.hendleCreate}/>;
+            }
+            if(allJogs.length===0) {
+                allJogs = <p>You don't have jogs for this period</p>
+            }
         }
 
         return(
@@ -78,7 +86,7 @@ class JogPage extends React.Component {
                     </Grid>
                 </MuiPickersUtilsProvider>
                 {allJogs}
-                {/*<button> </button>*/}
+                <button onClick={this.handelCreate}> </button>
             </section>
 
         );

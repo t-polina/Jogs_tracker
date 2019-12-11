@@ -39,4 +39,24 @@ export const getJogs = (userId) => async (dispatch) =>{
         console.log(e)
         dispatch(actions.setJogsFail(e))
     }
-}
+};
+
+
+export const createJog = (jog) => async (dispatch) =>{
+
+    try{
+        const {data}=await requestWithHeaders.post('https://jogtracker.herokuapp.com/api/v1/data/jog', jog);
+console.log(data)
+    }catch (e) {
+        console.log(e)
+    }
+};
+
+export const updateJog = (jog) => async (dispatch) =>{
+    try{
+        const {data}=await requestWithHeaders.put('https://jogtracker.herokuapp.com/api/v1/data/jog', jog);
+        console.log(data)
+    }catch (e) {
+        console.log(e)
+    }
+};

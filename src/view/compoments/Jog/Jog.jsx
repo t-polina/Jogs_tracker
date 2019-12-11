@@ -2,9 +2,16 @@ import React from 'react';
 import logo from '../../../assert/img/jog-logo.png'
 import JogStyle from './Jog.css'
 export default class Jog extends React.Component{
+    constructor(props) {
+        super(props);
+
+    }
+  handelCreate = () => {
+      this.props.handelCreate(this.props.id)
+  };
     render() {
         return(
-            <section className={'JogContainer'}>
+            <div className={'JogContainer'} onClick={this.handelCreate}>
                 <div>
                 <img src={logo} alt={'Jog logo'}/>
                 </div>
@@ -14,7 +21,7 @@ export default class Jog extends React.Component{
                 <p>Distance: {this.props.distance} km</p>
                 <p>Time: {this.props.time} min</p>
                 </div>
-            </section>
+            </div>
         );
     }
 }
