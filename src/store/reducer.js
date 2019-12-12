@@ -5,7 +5,7 @@ import {
     GET_JOGS_SUCCESS,
     GET_USER_FAIL,
     GET_USER_REQUEST,
-    GET_USER_SUCCESS
+    GET_USER_SUCCESS, SET_END_DATE, SET_START_DATE
 } from "./actions";
 
 const reducer = (state =initState, {type, payload} )=> {
@@ -43,6 +43,16 @@ const reducer = (state =initState, {type, payload} )=> {
                 ...state,
                 error: payload,
                 isLoading:false
+            };
+        case SET_START_DATE:
+            return{
+            ...state,
+                startDate: payload
+            };
+        case SET_END_DATE:
+            return {
+            ...state,
+                endDate: payload
             };
         default: return state;
     }

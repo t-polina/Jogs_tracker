@@ -1,5 +1,10 @@
 .pickerContainer{
     background: #eaeaea;
+    height: 60px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 @font-face {
     font-family: "SFRegular";
@@ -12,11 +17,8 @@
         bottom: 40px;
         right: 40px;
     }
-    .picker{
+    .date{
         width: 20%;
-    }
-    #data-picker-inline{
-        font-size: 10px;
     }
 }
 @media screen and (min-width: 600px){
@@ -26,44 +28,22 @@
        bottom: 30pt;
        right: 30pt;
    }
-    .picker{
-        width: 120px;
+    .date {
+        width: 10%;
     }
-    #data-picker-inline{
-        font-size: 12px;
-    }
-    #fieldDate{
-        position:relative;
-        left: 10%;
-    }
-}
-.pickerContainer span{
-    font-family: SFRegular;
-    font-size: 5px;
-    padding:12px 0;
-
-}
-.MuiTouchRipple-label{
-    z-index: -1;
-    width: 10px;
-    height: 1px;
 }
 #fieldDate{
+    font-family: SFRegular;
     color:#b0b0b0;
     font-size: 14px;
-    margin: auto 0;
-    padding: 0;
-    z-index: 1;
+    margin-right:15px ;
 }
-.picker{
+.date{
     /*width: 150px;*/
     height: 31px;
     border: solid 1px #979797;
     border-radius: 11px;
     padding: 0;
-}
-#date-picker-inline{
-    font-size: 12px;
 }
 .createJog{
     position: fixed;

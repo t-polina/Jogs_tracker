@@ -41,7 +41,7 @@ class JogsPage extends React.Component {
         if(this.props.jogs) {
             for (let i = 0; i < this.props.jogs.length; i++) {
                 let el = this.props.jogs[i];
-                if (el.date > this.state.startDate.getTime() && el.date < this.state.endDate.getTime()) {
+                if (el.date > this.props.startDate && el.date < this.props.endDate) {
                     let date = new Date(el.date).toString();
                     date = getMonth(date.substr(4, 3), date.substr(8, 2), date.substr(11, 4));
                     allJogs.push(<Jog time = {el.time}
@@ -63,33 +63,7 @@ class JogsPage extends React.Component {
 
         return(
             <section>
-                <div className='pickerContainer'>
-                <MuiPickersUtilsProvider utils={DateFnsUtils}>
-                    <Grid container justify="space-around">
-                    <span id={'fieldDate'}>Date from</span>
-                        <KeyboardDatePicker className={'picker'}
-                            disableToolbar
-                            variant="inline"
-                            format="MM/dd/yyyy"
-                            margin="normal"
-                            id="date-picker-inline"
-                            value={this.state.startDate}
-                            onChange={this.handelChangeStartPicker}
-                        />
-                     <span id={'fieldDate'}>Date to</span>
-                        <KeyboardDatePicker className={'picker'}
-                            disableToolbar
-                            variant="inline"
-                            format="MM/dd/yyyy"
-                            margin="normal"
-                            id="date-picker-inline"
-                            // label="Date at"
-                            value={this.state.endDate}
-                            onChange={this.handelChangeEndPicker}
-                        />
-                    </Grid>
-                </MuiPickersUtilsProvider>
-                </div>
+
                 {allJogs}
                 <button className='createJog' onClick={this.handelCreate}><img src={add} alt={'Add jogs'}/></button>
             </section>
@@ -106,7 +80,9 @@ function  getMonth(monthStr, dayStr, yearStr) {
 const mapStateToProps = (state) => {
     return {
         user: selectors.userSelector(state),
-        jogs: selectors.jogsSelector(state)
+        jogs: selectors.jogsSelector(state),
+          startDate: selectors.startDataSelector(state),
+         endDate: selectors.endDateSelector(state)
     }
 };
 const mapDispatchToProps = (dispatch) => {

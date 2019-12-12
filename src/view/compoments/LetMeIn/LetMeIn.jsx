@@ -4,8 +4,8 @@ import {getToken} from '../../../store/thunks'
 import {connect} from "react-redux";
 
 class LetMeIn extends React.Component{
-    handelClick =  () =>{
-        this.props.getToken('hello');
+    handelClick =  async () =>{
+        await this.props.getToken('hello');
         this.props.history.push('/jog');
     };
     render() {

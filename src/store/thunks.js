@@ -30,20 +30,18 @@ export const getJogs = (userId) => async (dispatch) =>{
         const {data}=await requestWithHeaders.get('http://jogtracker.herokuapp.com/api/v1/data/sync');
         data.response.jogs.map(el => {
             if(el.user_id===userId){
-             // dispatch(actions.setJogsSuccess(el))
                 jogs.push(el)
             }
         });
-        dispatch(actions.setJogsSuccess(jogs))
+        dispatch(actions.setJogsSuccess(jogs));
     }catch (e) {
-        console.log(e)
-        dispatch(actions.setJogsFail(e))
+        console.log(e);
+        dispatch(actions.setJogsFail(e));
     }
 };
 
 
 export const createJog = (jog) => async (dispatch) =>{
-
     try{
         const {data}=await requestWithHeaders.post('http://jogtracker.herokuapp.com/api/v1/data/jog', jog);
 console.log(data)
@@ -56,6 +54,15 @@ export const updateJog = (jog) => async (dispatch) =>{
     try{
         const {data}=await requestWithHeaders.put('http://jogtracker.herokuapp.com/api/v1/data/jog', jog);
         console.log(data)
+    }catch (e) {
+        console.log(e)
+    }
+};
+export const setDate = (start, end) => (dispatch) =>{
+    try{
+        // console.log(dates);
+        dispatch(actions.setStartDate(start));
+        dispatch(actions.setEndDate(end));
     }catch (e) {
         console.log(e)
     }
