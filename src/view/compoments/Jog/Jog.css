@@ -1,20 +1,58 @@
-.JogContainer{
-    height: 150px;
+@font-face {
+    font-family: "SFRegular";
+    src:url("../../../assert/fonts/SFUIText-Regular.ttf")
+}
+@font-face {
+    font-family: "SFMedium";
+    src:url("../../../assert/fonts/SFUIText-Medium.ttf")
+}
+@media screen and (max-width: 600px){
+    .jogContainer{
+        margin-top:45pt ;
+        margin-bottom: 45pt;
+    }
+    .hr{
+        visibility: visible;
+    }
+}
+@media screen and (min-width: 600px){
+    .jogContainer{
+        margin-top:50px;
+        margin-bottom: 50px;
+    }
+    .hr{
+        visibility: hidden;
+    }
+}
+.jogContainer{
+    height: 100px;
     width: 300px;
     display: grid;
     grid-template-columns: 50% 50%;
     position: relative;
-}
-.JogContainer img{
-    width: 87px;
-    height: 87px;
-    position: absolute;
-    margin: auto;
-    top:0;
-    bottom: 0;
+    margin-right: auto;
+    margin-left:auto ;
 
 }
-.JogContainer p{
-    margin: 0;
-    margin-bottom: 12px ;
+.jogContainer img{
+    width: 87px;
+    height: 87px;
+    margin: 3px  20% 0 20%;
+}
+.infAboutJog p{
+    margin-top:0;
+    margin-bottom: 9px;
+    font-size: 14px;
+    font-family: SFMedium;
+}
+#date, p > span{
+    color:#b0b0b0;
+}
+#date{
+    font-family: SFRegular ;
+}
+.hr{
+    width: 99.5%;
+    size:1px;
+    color:#eaeaea;
 }

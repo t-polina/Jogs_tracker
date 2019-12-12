@@ -1,0 +1,73 @@
+.pickerContainer{
+    background: #eaeaea;
+}
+@font-face {
+    font-family: "SFRegular";
+    src:url("../../../assert/fonts/SFUIText-Regular.ttf")
+}
+@media screen and (max-width: 600px){
+    .createJog{
+        width: 47pt;
+        height: 47pt;
+        bottom: 40px;
+        right: 40px;
+    }
+    .picker{
+        width: 20%;
+    }
+    #data-picker-inline{
+        font-size: 10px;
+    }
+}
+@media screen and (min-width: 600px){
+   .createJog {
+       width: 60px;
+       height: 60px;
+       bottom: 30pt;
+       right: 30pt;
+   }
+    .picker{
+        width: 120px;
+    }
+    #data-picker-inline{
+        font-size: 12px;
+    }
+    #fieldDate{
+        position:relative;
+        left: 10%;
+    }
+}
+.pickerContainer span{
+    font-family: SFRegular;
+    font-size: 5px;
+    padding:12px 0;
+
+}
+.MuiTouchRipple-label{
+    z-index: -1;
+    width: 10px;
+    height: 1px;
+}
+#fieldDate{
+    color:#b0b0b0;
+    font-size: 14px;
+    margin: auto 0;
+    padding: 0;
+    z-index: 1;
+}
+.picker{
+    /*width: 150px;*/
+    height: 31px;
+    border: solid 1px #979797;
+    border-radius: 11px;
+    padding: 0;
+}
+#date-picker-inline{
+    font-size: 12px;
+}
+.createJog{
+    position: fixed;
+    background:none ;
+    border: none;
+    padding: 0;
+}

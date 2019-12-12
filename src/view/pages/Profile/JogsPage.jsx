@@ -1,14 +1,16 @@
 import React from 'react';
 import {connect} from "react-redux";
-import {getJogs, getUser} from '../../store/thunks'
-import * as selectors from '../../store/selectors'
-import Jog from "../compoments/Jog/Jog";
+import {getJogs, getUser} from '../../../store/thunks'
+import * as selectors from '../../../store/selectors'
+import Jog from "../../compoments/Jog/Jog";
 import { MuiPickersUtilsProvider, KeyboardDatePicker} from '@material-ui/pickers'
 import Grid from "@material-ui/core/Grid";
+import JogPages from './JogsPage.css'
 import DateFnsUtils from '@date-io/date-fns';
-import WithoutJogs from "../compoments/WithoutJogs/WithoutJogs";
+import WithoutJogs from "../../compoments/WithoutJogs/WithoutJogs";
+import add from '../../../assert/img/add.png'
 
-class JogPage extends React.Component {
+class JogsPage extends React.Component {
     state = {
         startDate: new Date(0),
         endDate: new Date()
@@ -19,8 +21,7 @@ class JogPage extends React.Component {
     };
 
     handelCreate =(...arg)=>{
-        console.log(arg)
-        arg[0]===undefined ? this.props.history.push('/create-jog') :
+        (typeof arg[0]=== 'object') ? this.props.history.push('/create-jog') :
         this.props.history.push(`/update-jog/${arg[0]}`);
     };
 
@@ -62,9 +63,11 @@ class JogPage extends React.Component {
 
         return(
             <section>
+                <div className='pickerContainer'>
                 <MuiPickersUtilsProvider utils={DateFnsUtils}>
                     <Grid container justify="space-around">
-                        <KeyboardDatePicker className={'pick'}
+                    <span id={'fieldDate'}>Date from</span>
+                        <KeyboardDatePicker className={'picker'}
                             disableToolbar
                             variant="inline"
                             format="MM/dd/yyyy"
@@ -73,7 +76,8 @@ class JogPage extends React.Component {
                             value={this.state.startDate}
                             onChange={this.handelChangeStartPicker}
                         />
-                        <KeyboardDatePicker
+                     <span id={'fieldDate'}>Date to</span>
+                        <KeyboardDatePicker className={'picker'}
                             disableToolbar
                             variant="inline"
                             format="MM/dd/yyyy"
@@ -85,8 +89,9 @@ class JogPage extends React.Component {
                         />
                     </Grid>
                 </MuiPickersUtilsProvider>
+                </div>
                 {allJogs}
-                <button onClick={this.handelCreate}> </button>
+                <button className='createJog' onClick={this.handelCreate}><img src={add} alt={'Add jogs'}/></button>
             </section>
 
         );
@@ -111,4 +116,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(JogPage)
+export default connect(mapStateToProps, mapDispatchToProps)(JogsPage)

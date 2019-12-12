@@ -1,13 +1,14 @@
-@font-face {
-    font-family: "SF";
-    src: url('../../../assert/SFUIText-Bold.otf') format('otf');
-}
+/*@font-face {*/
+/*    font-family: "SF";*/
+/*    src: url('../../../assert/SFUIText-Bold.otf') format('otf');*/
+/*}*/
 @media screen and (min-width:600px){
     .letMeInContainer{
         background:#e990f9;
         width: 503px;
         height:379px;
         border-radius: 44px;
+        margin-top: 10%;
     }
     .letMeInButton{
         border: solid 3px #fff;
@@ -23,8 +24,10 @@
         background: #fff;
         width: 100%;
         height: auto;
+        margin-top: 30%;
     }
     .letMeInButton {
+        margin-top: 10%;
         border: solid 3px #e990f9;
         color: #e990f9;
         background: #fff;
@@ -34,10 +37,9 @@
     }
 }
 .letMeInContainer{
-    margin: auto;
+    margin-right: auto;
+    margin-left: auto;
     font-weight:bold ;
-    width: 503px;
-    height: 379px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -49,7 +51,8 @@
     height: 60pt;
     font-size:18pt;
     text-align: center;
-    margin:0 auto;
+    margin-right:auto;
+    margin-left: auto;
 }
 .bearFace{
     margin:0 50%;

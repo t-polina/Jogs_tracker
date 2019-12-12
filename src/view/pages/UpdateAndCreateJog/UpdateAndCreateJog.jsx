@@ -42,8 +42,8 @@ class UpdateAndCreate extends React.Component {
                     {({ handleSubmit, handleChange }) => (
                         <form onSubmit={handleSubmit}>
                             <div className='field first'><span className='fieldName'>Distance</span> <input className="input" name="distance" onChange={handleChange} /></div>
-                            <diV className='field'>   <span className = 'fieldName'>Time</span>  <input className="input"  name="time"  onChange={handleChange} /></diV>
-                            <div className='field'>  <span className = 'fieldName'>Date</span>  <input className="input" name="date" onChange={handleChange} /></div>
+                            <div className='field'>   <span className = 'fieldName'>Time</span>  <input className="input"  name="time"  onChange={handleChange} /></div>
+                            <div className='field'>  <span className = 'fieldName'>Date</span>  <input className="input" type='date' name="date" onChange={handleChange} /></div>
                             <div className='buttonContainer'><button className="saveButton" type="submit"> Save </button></div>
                         </form>
                     )}

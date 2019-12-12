@@ -1,0 +1,64 @@
+@font-face {
+    font-family: "SFBold";
+    src:url("../../../assert/fonts/SFUIText-Bold.ttf")
+}
+@font-face {
+    font-family: "SFRegular";
+    src:url("../../../assert/fonts/SFUIText-Regular.ttf")
+}
+
+@media screen and (min-width: 600px){
+    .createFirstJog{
+        border-radius: 36px;
+        width: 249px;
+        height: 60px;
+        border: solid 3px #e990f9;
+    }
+    .sadFace{
+        height: 151px;
+        width: 150px;
+        margin-top: 240px;
+    }
+    .textNothing{
+        display: inline-block;
+        width: 182px;
+        height: 58px;
+        font-size: 24px;
+        margin: 47px auto 141px auto;
+    }
+
+}
+@media screen and (max-width: 600px){
+    .createFirstJog{
+        border-radius: 36pt;
+        width: 66.5%;
+        height: 60pt;
+        border: solid 3pt #e990f9;
+    }
+    .sadFace{
+        height: 86pt;
+        width: 85pt;
+        margin-top: 140pt;
+    }
+    .textNothing{
+        display: inline-block;
+        width: 182pt;
+        height: 58pt;
+        font-size: 24pt;
+        margin: 30pt auto 21.7% auto;
+    }
+}
+.createFirstJog{
+    color:#e990f9;
+    background: white;
+    font-size: 18px;
+    font-family: SFBold;
+}
+.textNothing{
+    color:#b0b0b0;
+    font-family: SFRegular;
+}
+.withoutJogContainer{
+    margin: auto;
+    text-align: center;
+}
