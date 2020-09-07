@@ -26,13 +26,13 @@
     margin: 0 auto;
 }
 
-.mobile-button {
+.mobile-let-me-in-button {
     border: solid 3px #e990f9;
     color: #e990f9;
     background: #fff;
 }
 
-.desktop-button {
+.desktop-let-me-in-button {
     border: solid 3px #fff;
     color: #fff;
     background: #e990f9;

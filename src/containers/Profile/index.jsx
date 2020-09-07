@@ -67,20 +67,20 @@ class JogsPage extends React.Component {
 
     render() {
         const { isFilter } = this.props.filter;
- 
+
         const { isMobileMode } = this.state;
         let jogsForRender = [];
         console.log(isMobileMode || isFilter)
-        // if (this.props.jogs.length === 0) {
+        if (this.props.jogs.length === 0) {
             jogsForRender = <WithoutJogs handelCreate={this.hendleCreate} />;
-        // } else {
-        //     const filtredJogs = this.getFilteredJogs();
-    
-        //     jogsForRender = this.renderJogs(filtredJogs);  
-        //   if (jogsForRender.length === 0) {
-        //         jogsForRender = <p>You don't have jogs for this period</p>
-        //     }
-        // }
+        } else {
+            const filtredJogs = this.getFilteredJogs();
+
+            jogsForRender = this.renderJogs(filtredJogs);
+            if (jogsForRender.length === 0) {
+                jogsForRender = <p>You don't have jogs for this period</p>
+            }
+        }
 
         return (
             <div>

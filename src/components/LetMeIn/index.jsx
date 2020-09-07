@@ -35,7 +35,7 @@ class LetMeIn extends React.Component {
         return (
             <div className={`let-me-in-container ${isMobileMode ? 'mobile-container' : 'desktop-container'}`}>
                 <img className={'bear-face'} alt={'Bear face'} src={bearFace} />
-                <button className={`let-me-in-button bold ${isMobileMode ? 'mobile-button' : 'desktop-button'}`} onClick={this.handelClick}>Let me in</button>
+                <button className={`let-me-in-button bold ${isMobileMode ? 'mobile-let-me-in-button' : 'desktop-let-me-in-button'}`} onClick={this.handelClick}>Let me in</button>
             </div>
         );
     }
