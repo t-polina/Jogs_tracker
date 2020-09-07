@@ -1,0 +1,134 @@
+#menuToggle {
+    opacity: 0;
+    visibility: visible;
+}
+
+.hamburger-container {
+    height: 77px;
+    width: 100%;
+    min-width: 350px;
+}
+
+.menu-button {
+    visibility: visible;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 27px;
+    left: 85.9%;
+    width: 28px;
+    height: 24px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.menu-button>span, .menu-button>span::before, .menu-button>span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: white;
+}
+
+.menu-button>span::before {
+    content: '';
+    top: -8px;
+}
+
+.menu-button>span::after {
+    content: '';
+    top: 8px;
+}
+
+.menu-container {
+    min-width: 350px;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    visibility: hidden;
+    z-index: 10;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-bar {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+    text-align: center;
+    margin: auto;
+}
+
+.active a {
+    color: #7ed321 !important;
+}
+
+.menu-bar a {
+    display: inline-block;
+    padding-top: 12.5px;
+    padding-bottom: 12.5px;
+    color: #000;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+#menuToggle:checked~.menu-button {
+    position: fixed;
+    width: 21px;
+    height: 21px;
+    top: 28px;
+}
+
+#menuToggle:checked~.menu-button>span {
+    transform: rotate(45deg);
+    z-index: 1000;
+}
+
+#menuToggle:checked~.menu-button>span::before {
+    top: 0;
+    transform: rotate(0);
+    background: rgb(176 171 171);
+}
+
+#menuToggle:checked~.menu-button>span::after {
+    top: 0;
+    transform: rotate(90deg);
+    background: rgb(176 171 171);
+}
+
+#menuToggle:checked~.menu-container {
+    visibility: visible;
+    top: 0;
+    left: 0;
+}
+
+.white-logo {
+    margin: 20px 0 0 25px;
+    width: 98px;
+    height: 37px;
+}
+
+.logo {
+    width: 98px;
+    height: 37px;
+    margin: 20px 0 0 25px;
+}
+
+.mobile-filter {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 66.9%;
+    margin: auto 0;
+}
+
+.on-mobile {
+    top: 18px;
+}
+
+.off-mobile {
+    top: 26px;
+}

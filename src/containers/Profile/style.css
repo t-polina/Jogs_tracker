@@ -1,0 +1,45 @@
+    .modile-create-jog {
+        width: 47pt;
+        height: 47pt;
+        bottom: 40px;
+        right: 40px;
+    }
+
+    .desktop-create-jog {
+        width: 60px;
+        height: 60px;
+        bottom: 30pt;
+        right: 30pt;
+    }
+
+    .create-jog {
+        position: fixed;
+        background: none;
+        border: none;
+        padding: 0;
+    }
+
+    .jogs-container {
+        display: flex;
+    }
+
+
+    @media screen and (max-width: 600px) {
+        .jogs-container {
+            height: calc(100vh - 77px);
+        }
+        .isFilter {
+            height: calc(100vh - 137px);
+        }
+     
+    }
+
+    @media screen and (min-width: 600px) {
+        .jogs-container {
+            height: calc(100vh - 116px);
+        }
+        .isFilter {
+            height: calc(100vh - 176px);
+        }
+     
+    }

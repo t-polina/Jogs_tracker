@@ -1,0 +1,51 @@
+@media screen and (max-width: 600px) {
+    .jog-container {
+        margin-top: 45pt;
+        margin-bottom: 45pt;
+    }
+    .hr {
+        visibility: visible;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .jog-container {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .hr {
+        visibility: hidden;
+    }
+}
+
+.jog-container {
+    height: 100px;
+    width: 300px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.jog-icon {
+    width: 87px;
+    height: 87px;
+    margin: 3px 20% 0 20%;
+}
+
+.jog-info-container p {
+    margin-top: 0;
+    margin-bottom: 9px;
+    font-size: 14px;
+}
+
+.jog-date, p>span {
+    color: #b0b0b0;
+}
+
+.hr {
+    width: 99.5%;
+    size: 1px;
+    color: #eaeaea;
+}

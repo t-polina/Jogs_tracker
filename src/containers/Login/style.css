@@ -1,0 +1,8 @@
+.login-container{
+    min-width: 350px;
+    height: calc(100vh - 77px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}

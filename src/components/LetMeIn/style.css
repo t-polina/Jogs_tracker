@@ -1,0 +1,45 @@
+.desktop-container {
+    width: 503px;
+    height: 379px;
+    background: #e990f9;
+    border-radius: 44px;
+}
+.mobile-container{
+    height: 313px;
+}
+.let-me-in-container {
+    min-width: 350px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.let-me-in-button {
+    border-radius: 36px;
+    width: 151px;
+    height: 60px;
+    font-size: 18px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.mobile-button {
+    border: solid 3px #e990f9;
+    color: #e990f9;
+    background: #fff;
+}
+
+.desktop-button {
+    border: solid 3px #fff;
+    color: #fff;
+    background: #e990f9;
+}
+
+.bear-face {
+    height: 150px;
+    width: 160px;
+    margin: 0 50%;
+}

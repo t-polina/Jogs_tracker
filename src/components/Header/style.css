@@ -1,0 +1,15 @@
+.header-container {
+    min-width: 350px;
+    background: #7ed321;
+    margin: 0;
+}
+
+.on-filter {
+    width: 39px;
+    height: 39px;
+}
+
+.off-filter {
+    width: 26px;
+    height: 26px;
+}

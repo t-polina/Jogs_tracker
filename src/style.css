@@ -1,0 +1,31 @@
+@font-face {
+    font-family: "SFBold";
+    src: url("./assert/fonts/SFUIText-Bold.ttf")
+}
+
+@font-face {
+    font-family: "SFRegular";
+    src: url("./assert/fonts/SFUIText-Regular.ttf")
+}
+
+@font-face {
+    font-family: "SFMedium";
+    src: url("./assert/fonts/SFUIText-Medium.ttf")
+}
+
+.bold {
+    font-family: SFBold;
+}
+
+.regular {
+    font-family: SFRegular;
+}
+
+.medium {
+    font-family: SFMedium;
+}
+
+body {
+    margin: 0;
+    font-family: SFRegular;
+}

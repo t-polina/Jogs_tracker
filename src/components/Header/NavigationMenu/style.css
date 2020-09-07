@@ -1,0 +1,58 @@
+.desktop-header-container {
+    height: 116px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.desktop-menu-bar li {
+    font-size: 14px;
+    display: inline;
+}
+
+.desktop-menu-bar a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #fff;
+    padding: 0 3px 4.1px 3.8px;
+}
+
+.active-desktop {
+    border-bottom: solid 3px #fff;
+}
+
+.desktop-menu-bar {
+    margin: 50px 49px 50px 0;
+}
+
+.desktop-menu-bar li:first-child {
+    margin-right: 46px;
+}
+
+.desktop-menu-bar li:nth-child(2) {
+    margin-right: 45px;
+}
+
+.desktop-filter {
+    margin: 0 0px 38px 0;
+}
+
+.desktop-logo {
+    width: 147px;
+    height: 56px;
+    margin: 0 0 0 37px;
+}
+
+.desktop-action {
+    display: flex;
+    margin-right: 30px;
+}
+
+.on-desktop {
+    margin-top: 39px !important
+}
+
+.off-desktop {
+    margin-top: 47px!important
+}

@@ -1,0 +1,46 @@
+.empty-jogs-container {
+    margin: auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+}
+
+.desktop-face {
+    width: 150px;
+    height: 151px;
+    margin-bottom: 47px;
+}
+
+.mobile-face {
+    width: 85px;
+    height: 86px;
+    margin-bottom: 30px;
+}
+
+.text-container {
+    color: #b0b0b0;
+    font-size: 24px;
+    width: 182px;
+    height: 58px;
+}
+
+.create-first-jog-button {
+    color: #e990f9;
+    background: white;
+    font-size: 18px;
+    border: solid 3px #e990f9;
+    border-radius: 36px;
+    height: 60px;
+}
+
+.mobile-button {
+    width: 251px;
+    margin-top:145px;
+}
+
+.desktop-button {
+    width: 249px;
+    margin-top:141px;
+}

@@ -1,0 +1,39 @@
+.info-container {
+    max-width: 614px;
+    min-width: 325px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.mobile-container {
+    margin: 0 25px !important;
+}
+
+.info-header {
+    color: #7ed321;
+}
+
+.mobile-header {
+    width: 62px;
+    height: 30px;
+    font-size: 25px;
+    margin-bottom: 6px;
+}
+
+.desktop-header {
+    width: 89px;
+    height: 43px;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.mobile-text {
+    font-size: 12px;
+    line-height: 24px;
+}
+
+.desktop-text {
+    font-size: 14px;
+    line-height: 24px;
+}
