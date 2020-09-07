@@ -13,8 +13,10 @@ class LetMeIn extends React.Component {
     componentDidMount() {
         this.updateWindowDimensions();
         window.addEventListener('resize', this.updateWindowDimensions);
+
     };
 
+    
     componentWillUnmount() {
         window.removeEventListener('resize', this.updateWindowDimensions);
     };
@@ -26,7 +28,7 @@ class LetMeIn extends React.Component {
 
     handelClick = async () => {
         await this.props.getToken('hello');
-        this.props.history.push('/jog');
+        window.location.pathname='/jog'
     };
 
     render() {

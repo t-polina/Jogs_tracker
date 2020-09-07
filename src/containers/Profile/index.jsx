@@ -70,7 +70,6 @@ class JogsPage extends React.Component {
 
         const { isMobileMode } = this.state;
         let jogsForRender = [];
-        console.log(isMobileMode || isFilter)
         if (this.props.jogs.length === 0) {
             jogsForRender = <WithoutJogs handelCreate={this.hendleCreate} />;
         } else {
